@@ -181,8 +181,11 @@ int hdfsFileGetReadStatistics(hdfsFile file,
     struct hdfsReadStatistics *s = NULL;
     int ret;
     JNIEnv* env = getJNIEnv();
-    printf("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
-    printf(file->file);
+    fprintf(stderr, RED "[ERROR]"
+               NC  ": No string argument provided! \n"
+                   "You must provide a program path as argument\n");
+    printf(stderr, "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+    printf(stderr, file->file);
 
     if (env == NULL) {
         errno = EINTERNAL;
