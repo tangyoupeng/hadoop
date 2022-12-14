@@ -181,6 +181,8 @@ int hdfsFileGetReadStatistics(hdfsFile file,
     struct hdfsReadStatistics *s = NULL;
     int ret;
     JNIEnv* env = getJNIEnv();
+    printf("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+    printf(file->file);
 
     if (env == NULL) {
         errno = EINTERNAL;
